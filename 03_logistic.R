@@ -1,4 +1,3 @@
-```{r}
 ##' Logistic model
 ##'
 ##' @param theta  parameter vector
@@ -8,6 +7,7 @@ pred.logistic <- function(theta,x){
   z = exp(theta[3]+theta[4]*x)
   Ey = theta[1]+theta[2]*z/(1+z) 
 }
+
 ##' Fit logistic model
 ##' 
 ##' @param dat  dataframe of day of year (doy), gcc_mean, gcc_std
@@ -22,5 +22,4 @@ fit.logistic <- function(dat,par){
   
   ## fit by numerical optimization
   optim(par,fn = lnL.logistic,dat=dat)
-}
-```
+
