@@ -22,4 +22,5 @@ fit.logistic <- function(dat,par){
   
   ## fit by numerical optimization
   optim(par,fn = lnL.logistic,dat=dat)
+}
 
