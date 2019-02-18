@@ -18,6 +18,7 @@ if(file.exists("03_logistic.R"))          source("03_logistic.R")
 ## Download phenology data
 URL = "http://phenocam.sr.unh.edu/data/archive/uiefprairie/ROI/uiefprairie_GR_1000_1day.csv"
 prairie.pheno <- download.phenocam(URL)
+
 ## Plot overall phenology data
 plot.phenocam(prairie.pheno)
 ## Create and visualize subset of data for leaf out
@@ -31,4 +32,5 @@ fit = fit.logistic(dat,par)
 ## Visualize model and data
 plot.phenocam(dat)
 lines(dat$date,pred.logistic(fit$par,dat$doy),col=2)
+
 ```
